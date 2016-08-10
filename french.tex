@@ -1,0 +1,130 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+  \moderncvstyle{banking}
+  \moderncvcolor{red}
+  \nopagenumbers{}
+
+  \usepackage[utf8]{inputenc}
+  \usepackage[scale=0.82]{geometry}
+  \recomputelengths
+  
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%% Change the space between columns to fit with the hspaces %%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+  \renewcommand*{\cvdoubleitem}[5][.25em]{%
+    \begin{minipage}[t]{1.25\doubleitemcolumnwidth}\hintstyle{#2}: #3\end{minipage}%
+    \hfill% fill of \separatorcolumnwidth
+    \begin{minipage}[t]{\doubleitemcolumnwidth}\ifthenelse{\equal{#4}{}}{}{\hintstyle{#4}: }#5\end{minipage}%
+    \par\addvspace{#1}}
+  
+  \renewcommand*{\cventry}[7][.25em]{
+    \begin{tabular*}{0.95\maincolumnwidth}{l@{\extracolsep{\fill}}r}%
+      {\bfseries #4} & {\bfseries #5}\\%
+      {\itshape #3\ifthenelse{\equal{#6}{}}{}{, #6}} & {\itshape #2}\\%
+    \end{tabular*}%
+    \ifx&#7&%
+    \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#7%
+    \end{minipage}}\fi%
+    \par\addvspace{#1}}
+    
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+  % Load personnal infos
+  \input{online_personnal.tex}
+
+  \begin{document}
+  
+    \makecvtitle
+    
+    \section{Objectif}
+      \hspace{0.5cm}
+      Apporter ma capacité d'analyse afin de fournir des solutions d'aide à la décision
+    
+    \section{Compétences informatiques}
+
+      \hspace{0.5cm}
+      \cvdoubleitem{Langages}{C\#, Java, SQL, R, C, C++, Scheme}
+                   {Data Mining}{Weka, PowerBI}
+                   
+      \hspace{0.5cm}
+      \cvdoubleitem{Base de données}{MySQL, SQL Server 2016}
+                   {IDE}{Eclipse, Visual Studio, RStudio}
+                   
+      \hspace{0.5cm}
+      \cvdoubleitem{Web}{ASP.NET, HTML5, XSLT, XPath, JSON, CSS3}
+                   {Modélisation}{UML}
+      
+      \hspace{0.5cm}
+      \cvdoubleitem{Réseaux}{Modèle OSI, BGP, IPv6}
+                   {Mobile}{Android}
+      
+      \hspace{0.5cm}
+      \cvitem{Autre}{\LaTeX, XML, TFS, Git, Scrum}
+
+    \section{Formation \& Diplômes}
+
+      \hspace{0.5cm}
+      \cventry
+        {Hornu}
+        {Formation Technocité Cefora}
+        {Développeur .NET orienté mobile}
+        {2016--présent}{}{}
+
+      \hspace{0.5cm}
+      \cventry
+        {Mons}
+        {Université de Mons}
+        {Master en Sciences Informatiques}
+        {2008--2015}
+        {}
+        {\begin{itemize}%
+            \addtolength{\itemindent}{1cm}
+            \item Réalisation d'un projet de City Guide mobile sous Android;%
+            \item \parbox[t]{\linewidth}{Mémoire: "Implémentation d'algorithmes de décision pour la fonctionnalité et \\ 
+                                                   la sous-séquentialité de transducteurs finis"} \\
+        \end{itemize}}
+        
+      \hspace{0.5cm}
+      \cventry
+        {Tournai}
+        {Collège Notre-Dame}
+        {Études secondaires}
+        {2002--2008}
+        {}
+        {\begin{itemize}%
+            \addtolength{\itemindent}{1cm}
+            \item Option Sciences-Math
+        \end{itemize}}
+        
+    \section{Expérience professionnelle}
+    
+      \hspace{0.5cm}
+      \cventry
+        {Tournai}
+        {Evadix}
+        {Manutention}
+        {Été 2007 et été 2008}{}{}
+        
+    \section{Langues}
+    
+      \hspace{0.5cm}
+      \cvdoubleitem
+        {Français}{Langue maternelle}{\hspace{0.6cm}%
+         Anglais}{Capacité professionnelle}
+
+    \section{Loisirs}
+    
+      \hspace{0.5cm}
+      \cvitem{Magic the gathering}{Compétitions, organisation de tournois, finance}
+      \hspace{0.5cm}
+      \cvitem{Sports}{Pratique du skateboard pendant 15 ans}
+      \hspace{0.5cm}
+      \cvitem{Jeux de société}{Plateau, cartes}
+      \hspace{0.5cm}
+      \cvitem{Jeux vidéo}{Grande Stratégie, gestion}
+
+  \end{document}
